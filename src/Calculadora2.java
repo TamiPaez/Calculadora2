@@ -124,6 +124,11 @@ public class Calculadora2 extends javax.swing.JFrame {
         });
 
         btnModulo.setText("mod");
+        btnModulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModuloActionPerformed(evt);
+            }
+        });
 
         btnMultiplicacion.setText("x");
         btnMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +152,11 @@ public class Calculadora2 extends javax.swing.JFrame {
         });
 
         btnPorcentaje.setText("%");
+        btnPorcentaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPorcentajeActionPerformed(evt);
+            }
+        });
 
         btnBorrar.setText("C");
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -302,6 +312,22 @@ public class Calculadora2 extends javax.swing.JFrame {
             Panel.setText(String.valueOf(factorial));
         }
     }//GEN-LAST:event_btnFactorialActionPerformed
+
+    private void btnPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPorcentajeActionPerformed
+        // TODO add your handling code here:
+        double Num1 = Double.parseDouble(Numero1.getText());
+        double Num2 = Double.parseDouble(Numero2.getText());
+        double por = (Num1 * Num2) /100;
+        Panel.setText(String.valueOf(por));
+    }//GEN-LAST:event_btnPorcentajeActionPerformed
+
+    private void btnModuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModuloActionPerformed
+        // TODO add your handling code here:
+        double Num1 = Double.parseDouble(Numero1.getText());
+        double Num2 = Double.parseDouble(Numero2.getText());
+        double modulo = Num1 % Num2;
+        Panel.setText(String.valueOf(modulo));
+    }//GEN-LAST:event_btnModuloActionPerformed
     
     /**
      * @param args the command line arguments
